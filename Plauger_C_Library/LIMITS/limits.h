@@ -5,7 +5,6 @@
 #ifndef _YVALS
 #include <yvals.h>
 #endif
-
 // char properties
 #define CHAR_BIT    8
 #if _CSIGN
@@ -15,7 +14,6 @@
 #define CHAR_MAX    255
 #define CHAR_MIN    0
 #endif
-
 // int properties
 #if _ILONG
 #define INT_MAX     2147483647
@@ -26,7 +24,6 @@
 #define INT_MIN     (-32767-_C2)
 #define UINT_MAX    65535
 #endif
-
 // long properties
 #define LONG_MAX    2147483647
 #define LONG_MIN    (-2147483647-_C2)

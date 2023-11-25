@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <stdio.h>
 
-int main() {    // test basic properties of limits.h macros
+int main() {  // test basic properties of limits.h macros
     printf("CHAR_BIT = %2i   MB_LEN_MAX = %2i\n\n",
         CHAR_BIT, MB_LEN_MAX);
     printf(" CHAR_MAX = %10i   CHAR_MIN = %10i\n",
