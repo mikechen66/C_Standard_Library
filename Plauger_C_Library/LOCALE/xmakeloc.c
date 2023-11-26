@@ -1,5 +1,20 @@
 /* _Makeloc function */
 
+/* The original code in the last before the last for loop iu "case L_STATE" 
+ * is addressed as follows. 
+/*
+if (usp == NULL) {              // setup a new table
+    if ((usp = (unsigned short *)malloc(TABSIZ))
+            == NULL) {
+        return (0);
+    }
+    usp[0] = EOF:               // allocation flag or EOF
+    memcpy(++usp, ADDR(p, q, short *),
+        TABSIZ - sizeof(short));
+    *uspp = usp;
+}
+*/
+
 #include <string.h>
 #include "xlocale.h"
 
