@@ -1,5 +1,7 @@
 /* _Getloc and _Skip functions */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "xlocale.h"
 
