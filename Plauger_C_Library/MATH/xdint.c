@@ -3,6 +3,7 @@
 #include "xmath.h"
 
 short _Dint(double *px, short xexp) {   // test and drop (scaled) fraction bits
+    
     unsigned short *ps = (unsigned short *)px;
     unsigned short frac = ps[_D0] & _DFRAC
         || ps[_D1] || ps[_D2] || ps[_D3];
