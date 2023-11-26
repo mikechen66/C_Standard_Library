@@ -1,6 +1,7 @@
 /* _Setloc function */
 
 #include <ctype.h>
+#include <limits.h>
 #include "xlocale.h"
 
 _Linfo *_Setloc(int cat, _Linfo *p) {  // set category for locale
