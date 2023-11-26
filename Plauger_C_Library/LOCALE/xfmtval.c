@@ -69,16 +69,16 @@ char *_Fmtval(char *buf, double d, int fdarg) {  // format number by locale-spec
 
     for (s = buf; *fmt; ++fmt, s += strlen(s)) {
         switch (*fmt) {                         // process a format char
-            case '$':                               // insert currency symbol string
+            case '$':                           // insert currency symbol string
                 strcpy(s, cur_sym);
                 break;
-            case '-':                               // insert sign string 
+            case '-':                           // insert sign string 
                 strcpy(s, sign);
                 break;
-            default:                                // insert literal format char
+            default:                            // insert literal format char
                 *s++ = *fmt, *s = '\0';
                 break;
-            case 'V':                               // insert formatted value
+            case 'V':                           // insert formatted value
                 sprintf(s, "%#.*f",
                     0 < fd && fd != CHAR_MAX ? fd : 0, d);
                 end = strchr(s, p->decimal_point[0]);
@@ -94,7 +94,7 @@ char *_Fmtval(char *buf, double d, int fdarg) {  // format number by locale-spec
                 memmove(end + ns, end, strlen(end) + 1);
                 i = end - s, end += ns;
                 *end = 0 <= fd && fd != CHAR_MAX ? dec_pt : '\0';
-                for (g = grps; 0 < i; --ns) {      // copy up and insert separators
+                for (g = grps; 0 < i; --ns) {   // copy up and insert separators
                     if (g[0] <= 0 || i <= g[0] || g[0] == CHAR_MAX) {
                         break;
                     }
