@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include "xstdio.h"
+#include "yfuns.h"
 
 int _Fwprep(FILE *str) {    
 
