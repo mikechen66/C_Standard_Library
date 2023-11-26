@@ -1,7 +1,6 @@
 /* assert.h standard header */
 
 #undef assert  // remove existing definition
-
 #ifdef NDEBUG
     #define assert(test) ((void)0)   
 #else          // NDEBUG not defined
