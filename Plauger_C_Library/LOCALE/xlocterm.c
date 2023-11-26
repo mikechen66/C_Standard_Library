@@ -1,5 +1,7 @@
 /* _Locterm and _Locvar functions */
+
 #include <ctype.h>
+#include <limits.h>
 #include <string.h>
 #include "xlocale.h"
 
@@ -15,7 +17,7 @@ static const unsigned short dolvals[] = {
     _XA, _BB, _DI, _XD, _LO, _CN, _PU, _SP, _UP, _XS,
     UCHAR_MAX, ST_FOLD, ST_INPUT, ST_OUTPUT, ST_ROTATE};
 static const char uppers[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-static short vars[sizeof (uppers) - 1] = {0};
+static short vars[sizeof(uppers) - 1] = {0};
 
 int _Locvar(char ch, short val) { // set a $ variable
 
