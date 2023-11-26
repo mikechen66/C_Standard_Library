@@ -1,5 +1,6 @@
 /* _Readloc function */
 
+#include <stdio.h>
 #include <string.h>
 #include "xlocale.h"
 
