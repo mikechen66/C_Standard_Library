@@ -1,5 +1,6 @@
 /* _Costate, _Mbstate, and _Wcstate generic tables */
 
+#include <limits.h>
 #include "xlocale.h"
 #if UCHAR_MAX != 255
 #error WRONG STATE TABLE
