@@ -7,11 +7,11 @@
 #endif
 
 // macros
-#define NULL        _NULL
+#define NULL            _NULL
 #define EXIT_FAILURE    _EXFAIL
 #define EXIT_SUCCESS    0
-#define MB_CUR_MAX  _Mbcurmax
-#define RAND_MAX    32767
+#define MB_CUR_MAX      _Mbcurmax
+#define RAND_MAX        32767
 
 // type definitions
 #ifndef _SIZET
