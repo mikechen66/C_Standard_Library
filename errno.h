@@ -6,9 +6,9 @@
 #include <yvals.h>
 #endif
 // error codes 
-#define EDOM _EDOM
-#define ERANGE _ERANGE
-#define EFPOS _EFPOS
+#define EDOM    _EDOM
+#define ERANGE  _ERANGE
+#define EFPOS   _EFPOS
 // ADD YOURS HERE
 #define _NERR _ERRMAX  // one more than last code
 // declatations 
