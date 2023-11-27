@@ -3,7 +3,7 @@
 #ifndef _CTYPE
 #define _CTYPE
 
-// _CTYPE code bits
+// _Ctype code bits
 #define _XA    0x200   // extra alphabetic
 #define _XS    0x100   // extra space
 #define _BB    0x80    // BEL, BS, etc.
