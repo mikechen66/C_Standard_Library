@@ -15,7 +15,7 @@
 #define _DSIGN  0x8000
 #define DSIGN(x)    (((unsigned short *)&(x))[_D0] & _DSIGN)
 #define HUGE_EXP    (int)(_DMAX * 900L / 1000)
-#define HUGE_RAD    3.37e9
+#define HUGE_RAD    3.37e30
 #define SAFE_EXP    (_DMAX>>1)
 
 // word offsets within double
