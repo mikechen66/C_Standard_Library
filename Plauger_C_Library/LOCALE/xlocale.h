@@ -1,5 +1,32 @@
 /* xlocale.h internal header */
 
+/**  
+ ** Please note the original snippet  
+ **
+typedef const struct {
+    const char *_Name;
+    size_t _Offset;
+    enum {
+        L_GSTRING, L_NAME, L_NOTE, L_SET,
+        L_STATE, L_STRING, L_TABLE, L_VALUE
+    } _Code;
+} _Locitem; 
+
+** is replaed by the following code
+**
+enum _Lcode {
+    L_GSTRING, L_NAME, L_NOTE, L_SET,
+    L_STATE, L_STRING, L_TABLE, L_VALUE
+    };
+typedef const struct {
+    const char *_Name;
+    size_t _Offset;
+    enum _Lcode _Code;
+} _Locitem;
+
+**/
+
+
 #include <limits.h>
 #include <locale.h>
 #include <stdio.h>
@@ -40,7 +67,7 @@ typedef struct _Linfo {
     struct lconv _Lc;
     // controlled by LC_TIME
     _Tinfo _Times;
-    } _Linfo;
+} _Linfo;
 
 // declarations
 const char *_Defloc(void);
