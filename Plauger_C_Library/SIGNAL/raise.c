@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 // static data
-_Sigfun *_Sigtable[_NSIG] = {0};    // handler table */
+_Sigfun *_Sigtable[_NSIG] = {0};    // handler table
 
 int (raise)(int sig) {  // raise a signal
 
