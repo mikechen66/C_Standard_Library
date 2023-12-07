@@ -1,39 +1,70 @@
-/* ctype.h standard header */
+#ifndef _CTYPE_H
 
-#ifndef _CTYPE
-#define _CTYPE
+#include <ctype/ctype.h>
 
-// _Ctype code bits
-#define _XA    0x200   // extra alphabetic
-#define _XS    0x100   // extra space
-#define _BB    0x80    // BEL, BS, etc.
-#define _CN    0x40    // CR, FF, HT, NL, VT
-#define _DI    0x20    // '0'-'9'
-#define _LO    0x10    // 'a'-'z'
-#define _PU    0x08    // punctuation
-#define _SP    0x04    // space
-#define _UP    0x02    // 'A'-'Z'
-#define _XD    0x01    // '0'-'9', 'A'-'F', 'a'-'f'
+#ifndef _ISOMAC
+/* Initialize ctype locale data.  */
+extern void __ctype_init (void);
+libc_hidden_proto (__ctype_init)
 
-// declarations
-int isalnum(int), isalpha(int), iscntrl(int), isdigit(int);
-int isgraph(int), islower(int), isprint(int), ispunct(int);
-int isspace(int), isupper(int), isxdigit(int);
-int tolower(int), toupper(int);
-extern const short *_Ctype, *_Tolower, *_Toupper; 
+/* ctype/ctype.h defined this as a macro and we don't want to #undef it.
+   So defeat macro expansion with parens for this declaration.  */
+extern int (__isctype) (int __c, int __mask);
 
-// macro overrides
-#define isalnum(c)  (_Ctype[(int)(c)] & (_DI|_LO|_UP|_XA))
-#define isalpha(c)  (_Ctype[(int)(c)] & (_LO|_UP|_XA))
-#define iscntrl(c)  (_Ctype[(int)(c)] & (_BB|_CN))
-#define isdigit(c)  (_Ctype[(int)(c)] & _DI)
-#define isgraph(c)  (_Ctype[(int)(c)] & (_DI|_LO|_PU|_UP|_XA))
-#define islower(c)  (_Ctype[(int)(c)] & _LO)
-#define isprint(c)  (_Ctype[(int)(c)] & (_DI|_LO|_PU|_SP|_UP|_XA))
-#define ispunct(c)  (_Ctype[(int)(c)] & _PU)
-#define isspace(c)  (_Ctype[(int)(c)] & (_CN|_SP|_XS))
-#define isupper(c)  (_Ctype[(int)(c)] & _UP)
-#define isxdigit(c) (_Ctype[(int)(c)] & _XD)
-#define tolower(c)  _Tolower[(int)(c)]
-#define toupper(c)  _Toupper[(int)(c)]
-#endif
+libc_hidden_proto (tolower)
+libc_hidden_proto (toupper)
+
+# if IS_IN (libc)
+
+/* These accessors are used by the optimized macros to find the
+   thread-local cache of ctype information from the current thread's
+   locale.  For inside libc, define them as inlines using the _NL_CURRENT
+   accessors.  We don't use _NL_CURRENT_LOCALE->__ctype_b here because we
+   want to cause a link-time ref to _nl_current_LC_CTYPE under
+   NL_CURRENT_INDIRECT.  */
+
+#  include "../locale/localeinfo.h"
+#  include <libc-tsd.h>
+
+#  ifndef CTYPE_EXTERN_INLINE	/* Used by ctype/ctype-info.c, which see.  */
+#   define CTYPE_EXTERN_INLINE extern inline
+#  endif
+
+__libc_tsd_define (extern, const uint16_t *, CTYPE_B)
+__libc_tsd_define (extern, const int32_t *, CTYPE_TOUPPER)
+__libc_tsd_define (extern, const int32_t *, CTYPE_TOLOWER)
+
+
+CTYPE_EXTERN_INLINE const uint16_t ** __attribute__ ((const))
+__ctype_b_loc (void)
+{
+  return __libc_tsd_address (const uint16_t *, CTYPE_B);
+}
+
+CTYPE_EXTERN_INLINE const int32_t ** __attribute__ ((const))
+__ctype_toupper_loc (void)
+{
+  return __libc_tsd_address (const int32_t *, CTYPE_TOUPPER);
+}
+
+CTYPE_EXTERN_INLINE const int32_t ** __attribute__ ((const))
+__ctype_tolower_loc (void)
+{
+  return __libc_tsd_address (const int32_t *, CTYPE_TOLOWER);
+}
+
+#  ifndef __NO_CTYPE
+/* The spec says that isdigit must only match the decimal digits.  We
+   can check this without a memory access.  */
+#   undef isdigit
+#   define isdigit(c) ({ int __c = (c); __c >= '0' && __c <= '9'; })
+#   undef isdigit_l
+#   define isdigit_l(c, l) ({ int __c = (c); __c >= '0' && __c <= '9'; })
+#   undef __isdigit_l
+#   define __isdigit_l(c, l) ({ int __c = (c); __c >= '0' && __c <= '9'; })
+#  endif  /* Not __NO_CTYPE.  */
+
+# endif	/* IS_IN (libc).  */
+#endif  /* Not _ISOMAC.  */
+
+#endif /* ctype.h */
