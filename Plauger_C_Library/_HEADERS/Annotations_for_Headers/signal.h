@@ -9,7 +9,7 @@
  ** SIG_DFL:  Signal Default
  ** SIG_ERR:  Signal Error
  ** SIG_IGN:  Signal Ignore 
- **  _Sigfun: Sigal function
+ ** _Sigfun: Sigal function
  **
  **/
 

@@ -1,9 +1,9 @@
 /** assert.h standard header 
-
-**NDEBUG: NO DEBUG
-**STR: STRING
-**VAL: VARIABLE
-**/
+ **
+ **NDEBUG: NO DEBUG
+ **STR: STRING
+ **VAL: VARIABLE
+ **/
 
 #undef assert  // remove existing definition
 
