@@ -2,7 +2,7 @@
  **
  ** BB: BEL, BS 
  ** CN: Control
- ** DI: Digital Integers
+ ** DI: Double Integer
  ** LO: Lower
  ** UP: Upper
  ** XD: Extra Digital 

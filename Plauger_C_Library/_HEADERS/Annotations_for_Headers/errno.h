@@ -3,7 +3,7 @@
  ** ERRNO: Error number 
  ** EDOM:  Error Domain
  ** ERANGE: Error Range
- ** EFPOS: Error Position
+ ** EFPOS: Error Floating-point Positions
  ** ERRMAX: Error Maximization
  ** NERR:  Number of Errors
  **/

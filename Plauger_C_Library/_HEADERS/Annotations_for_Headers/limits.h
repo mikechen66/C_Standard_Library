@@ -2,7 +2,7 @@
  **
  ** CHAR:  Character 
  ** CSIGN: Character Sign
- ** MB:    Maximum Bits 
+ ** MB:    Multiple Bytes 
  ** SCHAR: Signed Character
  ** SHRT:  Short
  ** UCHAR: Unsigned Character
