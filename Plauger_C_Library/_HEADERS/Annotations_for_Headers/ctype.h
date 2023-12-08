@@ -1,11 +1,11 @@
-/**ctype.h standard header
+/** ctype.h standard header
  **
- **BB: BEL, BS 
- **CN: Control
- **DI: Digital Integers
- **LO: Lower
- **UP: Upper
- **XD: Extra Digital 
+ ** BB: BEL, BS 
+ ** CN: Control
+ ** DI: Digital Integers
+ ** LO: Lower
+ ** UP: Upper
+ ** XD: Extra Digital 
  **/
 
 
