@@ -8,7 +8,6 @@
  ** DIG: Digital
  ** FRND: Floating Rounds 
  ** RADIX: It is a base of power function
- **
  **/
 
 #ifndef _FLOAT

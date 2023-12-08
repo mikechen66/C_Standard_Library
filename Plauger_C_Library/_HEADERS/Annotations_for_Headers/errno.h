@@ -1,11 +1,11 @@
 /** errno.h standard header
  **
- **ERRNO: Error number 
- **EDOM:  Error Domain
- **ERANGE: Error Range
- **EFPOS: Error Position
- **ERRMAX: Error Maximization
- * NERR:  Number of Errors
+ ** ERRNO: Error number 
+ ** EDOM:  Error Domain
+ ** ERANGE: Error Range
+ ** EFPOS: Error Position
+ ** ERRMAX: Error Maximization
+ ** NERR:  Number of Errors
  **/
 
 #ifndef _ERRNO
