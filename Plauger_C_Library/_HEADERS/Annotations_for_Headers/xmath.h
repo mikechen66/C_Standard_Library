@@ -17,9 +17,6 @@
  ** _Retps: root of DBL_EPSILON
  ** _Xbig: the oppoite of _Rteps._D
  ** _Dconst: Double const
- **
- **
- **
  **/
 
 
