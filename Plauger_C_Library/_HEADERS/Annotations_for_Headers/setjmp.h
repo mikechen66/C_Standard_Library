@@ -1,7 +1,6 @@
 /** setjmp.h standard header *
  **
  ** _NSETJMP: number of setjmp
- **
  **/
 
 #ifndef _SETJMP

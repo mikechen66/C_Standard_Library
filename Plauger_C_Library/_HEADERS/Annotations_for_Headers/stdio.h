@@ -28,8 +28,7 @@
  ** vsprintf: it is equal to sprintf except arg replacing variable parameter
  ** ungetc: unsigned get character
  ** _Fgpos: ?
- ** _Fspos
- **
+ ** _Fspos: ?
  **/
 
 #ifndef _STDIO

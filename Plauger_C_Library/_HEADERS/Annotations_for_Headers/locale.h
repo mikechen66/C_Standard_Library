@@ -7,7 +7,6 @@
  ** lconv: local convertion
  ** 
  ** https://man7.org/linux/man-pages/man1/ncat.1.html
- **
  **/
 
 #ifndef _LOCALE

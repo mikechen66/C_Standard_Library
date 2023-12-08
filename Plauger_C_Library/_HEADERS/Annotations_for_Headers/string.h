@@ -20,7 +20,6 @@
  ** strtok:  string token, extract tokens from strings
  ** strxfrm: string transformartion, meaning transform string for comparison
  ** _Strerror: a function indicated in Plauger's book
- **
  **/
 
 #ifndef _STRING

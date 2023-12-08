@@ -2,7 +2,6 @@
  **
  ** wchat_t: wide character with type t
  ** ptrditt_t: difference between two pointers with type t
- **
  **/
 
 #ifndef _STDDEF

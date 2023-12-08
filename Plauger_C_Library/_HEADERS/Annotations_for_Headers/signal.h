@@ -10,7 +10,6 @@
  ** SIG_ERR:  Signal Error
  ** SIG_IGN:  Signal Ignore 
  ** _Sigfun: Sigal function
- **
  **/
 
 #ifndef _SIGNAL

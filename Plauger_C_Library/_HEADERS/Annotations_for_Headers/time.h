@@ -1,6 +1,5 @@
 /** time.h standard header 
  **
- 
  ** tm_mon: months since January – [0, 11]
  ** tm_year: years since 1900
  ** tm_wday: days since Sunday – [0, 6]

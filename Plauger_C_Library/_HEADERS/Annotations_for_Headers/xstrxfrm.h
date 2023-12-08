@@ -1,7 +1,6 @@
 /** xstrxfrm.h internal header 
  **
  ** _Cosave: a data typeof _Cosave stores state info between calls to _Strxfrm
- **
  **/
 
 #include <string.h>

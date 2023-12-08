@@ -5,7 +5,6 @@
  ** _Bnd: boundary
  ** _AUPBND: A upper boundary, its value is 2**N - 1
  ** _ADNBND: A down boundary, its value is 2**N - 1 or 0 
- **
  **/
 
 #ifndef _STDARG
