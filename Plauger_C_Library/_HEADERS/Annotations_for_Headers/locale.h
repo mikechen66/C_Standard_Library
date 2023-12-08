@@ -1,7 +1,7 @@
 /** locale.h standard header 
  **
  ** LC: Locale 
- *  NCAT: Concatenate and redirect sockets 
+ ** NCAT: Concatenate and redirect sockets 
  ** cs: currency_symbol
  ** mon: monetary
  ** lconv: local convertion
